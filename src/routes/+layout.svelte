@@ -1,5 +1,14 @@
 <script lang='ts'>
     import "../app.css";
+    import { height } from "./stores";
+
 </script>
-  
-<slot />
+
+<!-- <div style={`height: ${$height}px;`} class='w-full'> -->
+<div class='h-screen w-screen'>
+    <main class='w-full h-full'>
+        <slot />    
+    </main>
+</div>
+
+<svelte:window bind:innerHeight={$height}/>
