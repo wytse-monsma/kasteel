@@ -5,7 +5,7 @@
 </script>
 
 <!-- <div style={`height: ${$height}px;`} class='w-full'> -->
-<div class='h-screen w-screen'>
+<div class='h-[100dvh] w-screen'>
     <main class='w-full h-full'>
         <slot />    
     </main>
