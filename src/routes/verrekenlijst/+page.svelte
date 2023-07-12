@@ -4,7 +4,7 @@
     }
 </script>
 
-<div>
+<!-- <div>
     <form on:submit={() => verrekenen()}>
         <table>
             <tr>
@@ -15,4 +15,4 @@
         </table>
         <input type="text">
     </form>
-</div>
+</div> -->
