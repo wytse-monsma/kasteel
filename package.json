@@ -23,6 +23,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@sveltejs/adapter-vercel": "^3.0.2"
+		"@sveltejs/adapter-vercel": "^3.0.2",
+		"google-auth-library": "^8.9.0"
 	}
 }
