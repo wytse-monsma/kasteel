@@ -5,7 +5,7 @@ import { SECRET_CLIENT_ID, SECRET_CLIENT_SECRET } from '$env/static/private';
 
 export const actions = {
     OAuth2: async({})=>{
-        const redirectURL = 'http://localhost:5173/oauth';
+        const redirectURL = 'https://kasteel.vercel.app/oauth';
 
         console.log('id',SECRET_CLIENT_ID)
 
