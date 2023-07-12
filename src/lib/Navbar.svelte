@@ -1,6 +1,6 @@
-<nav>
-    <a href="/">Home</a>
-    <a href="/signup">Sign Up</a>
+<nav class="bg-black text-white">
+    <a href="/"><span class="text-white">Home</span></a>
+    <a href="/signup"><span class="text-white">Sign up</span></a>
     <h1>BITCHES</h1>
 </nav>
 

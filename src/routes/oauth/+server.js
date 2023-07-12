@@ -15,8 +15,8 @@ export const GET = async ({ url}) => {
     const code = await url.searchParams.get('code');
 
     //console.log('returned state',state)
-    console.log("CODECODECODECODE")
-    console.log('returned code',code)
+    // console.log("CODECODECODECODE")
+    // console.log('returned code',code)
 
     try {
         const oAuth2Client = new OAuth2Client(
@@ -29,7 +29,7 @@ export const GET = async ({ url}) => {
         oAuth2Client.setCredentials(r.tokens);
         console.info('Tokens acquired.');
         const user = oAuth2Client.credentials;
-        console.log('credentials',user);
+        // console.log('credentials',user);
 
         await getUserData(user.access_token);
 
