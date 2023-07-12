@@ -1,7 +1,7 @@
 <nav>
     <a href="/">Home</a>
     <a href="/signup">Sign Up</a>
-
+    <h1>BITCHES</h1>
 </nav>
 
 
