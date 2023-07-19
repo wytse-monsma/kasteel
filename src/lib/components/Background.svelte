@@ -8,8 +8,8 @@
     let SPEEDARRAY: number[] = [];
 
     // Pattern properties
-    let mult: number = 0.004; // Branching
-    const noiseDetail: number = 20; // spread
+    let mult: number = 0.0003; // Branching
+    const noiseDetail: number = 2; // spread
     const falloff: number = 0.1; // Spread based on octaves, 0.5 means half the amplitude of the previous octave
 
     // Line properties
@@ -41,7 +41,7 @@
 
             for (let f=0; f<POINTSARRAY.length; f++) {
                 let points = POINTSARRAY[f]
-                let rgba = [235, 207, 52, 255]
+                let rgba = [235, 20, 52, 255]
                 filler(p5, s/POINTSARRAY.length, rgba, points)
 
             }

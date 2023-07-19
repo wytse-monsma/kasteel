@@ -1,7 +1,8 @@
 <nav class="bg-black text-white">
     <a href="/"><span class="text-white">Home</span></a>
-    <a href="/signup"><span class="text-white">Sign up</span></a>
-    <h1>BITCHES</h1>
+    <a href="/schoonmaakrooster"> <span class="text-white"> schoonmaakrooster</span></a>
+    <!-- <a href="/signup"><span class="text-white">Sign up</span></a>
+    <h1>BITCHES</h1> -->
 </nav>
 
 
