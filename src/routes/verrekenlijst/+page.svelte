@@ -19,9 +19,8 @@
         {naam: 'Oenk', is_actief: true},
         {naam: 'Culo', is_actief: true},
         {naam: 'Boph', is_actief: true}];
-    let headers:                    string[] = ['gedronken', 'ingelegd aanbieding', 'ingelegd normaal', 'ingelegd klok', 'statie inlever', 'statie inleg']
-    let num = 1;
-    let tableData = Array(6).fill(0).map(() => Array(kasteelheren.length + 1).fill(num++));
+    let headers: string[] = ['gedronken', 'ingelegd aanbieding', 'ingelegd normaal', 'ingelegd klok', 'statie inlever', 'statie inleg']
+    let tableData = Array(6).fill(0).map(() => Array(kasteelheren.length + 1).fill(0));
 
     // prices
     let prijs_krat_normaal = 17.99
