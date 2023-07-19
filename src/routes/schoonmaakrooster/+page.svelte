@@ -1,4 +1,7 @@
 
+<!-- <script>
+    import schoonmaakrooster from 'static/schoonmaakrooster.PNG';
+</script> -->
 <div class="self-center">
-    <img src="src\lib\assets\schoonmaakrooster.PNG" alt="schoonmaakrooster" width="691px" height="681px"/>
+    <img src="/schoonmaakrooster.PNG" alt="schoonmaakrooster" width="691px" height="681px"/>
 </div>
