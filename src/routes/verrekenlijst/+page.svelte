@@ -18,13 +18,14 @@
         {naam: 'Mata', is_actief: true},
         {naam: 'Oenk', is_actief: true},
         {naam: 'Culo', is_actief: true},
-        {naam: 'Boph', is_actief: true}];
+        {naam: 'Jors', is_actief: true}];
     let headers: string[] = ['gedronken', 'ingelegd aanbieding', 'ingelegd normaal', 'ingelegd klok', 'statie inlever', 'statie inleg']
     let tableData = Array(6).fill(0).map(() => Array(kasteelheren.length + 1).fill(0));
+    let transferString: string[] = []
 
     // prices
-    let prijs_krat_normaal = 17.99
-    let prijs_krat_aanbieding = 14.99
+    let prijs_krat_normaal = 18.46
+    let prijs_krat_aanbieding = 13.85
     let prijs_krat_klok = 9.99
     let prijs_biertje_normaal = prijs_krat_normaal / 24
     let prijs_biertje_aanbieding = prijs_krat_aanbieding / 24
@@ -56,6 +57,9 @@
 
             saldo[i] = totaal_betaald - totaal_kosten;
         }
+        console.log("-------------------------")
+        console.log(saldo)
+        console.log("-------------------------")
 
         // Verrekening
         for (let j=0; j<kasteelheren.length; j++) {
@@ -65,7 +69,8 @@
                     // Transfer alles
                     if (saldo[j] *-1 < saldo[temp_index]) {
                         // TODO: PRINT MESSAGE TO USER
-                        console.log(kasteelheren[j].naam + " " + saldo[j] + " to: " + kasteelheren[temp_index].naam);
+                        // console.log(kasteelheren[j].naam + " " + Math.abs(saldo[j].toFixed(2)) + " to: " + kasteelheren[temp_index].naam);
+                        transferString = [...transferString, kasteelheren[j].naam + " " + Math.abs(saldo[j].toFixed(2)) + " to: " + kasteelheren[temp_index].naam];
                         saldo[temp_index] += saldo[j];
                         saldo[j] = 0;
                     }
@@ -73,7 +78,9 @@
                     // Transfer deel
                     else if (saldo[j] *-1 > (saldo[temp_index])) {
                         // TODO: PRINT MESSAGE TO USER
-                        console.log(kasteelheren[j].naam + " " + saldo[temp_index] + " to: " + kasteelheren[temp_index].naam);
+                        // console.log(kasteelheren[j].naam + " " + Math.abs(saldo[temp_index].toFixed(2)) + " to: " + kasteelheren[temp_index].naam);
+                        transferString = [...transferString, kasteelheren[j].naam + " " + Math.abs(saldo[temp_index].toFixed(2)) + " to: " + kasteelheren[temp_index].naam];
+
                         saldo[j] += saldo[temp_index];
                         saldo[temp_index] = 0;
                     }
@@ -87,7 +94,8 @@
                     // Transfer alles
                     if (saldo[j] < saldo[temp_index] * -1) {
                         // TODO: PRINT MESSAGE TO USER
-                        console.log(kasteelheren[temp_index].naam + " " + saldo[j] + " to: " + kasteelheren[j].naam);
+                        // console.log(kasteelheren[temp_index].naam + " " + Math.abs(saldo[j].toFixed(2)) + " to: " + kasteelheren[j].naam);
+                        transferString = [...transferString, kasteelheren[temp_index].naam + " " + Math.abs(saldo[j].toFixed(2)) + " to: " + kasteelheren[j].naam];
                         saldo[temp_index] += saldo[j];
                         saldo[j] = 0;
                     }
@@ -95,7 +103,8 @@
                     // Transfer deel
                     else if (saldo[j] > (saldo[temp_index] *-1)) {
                         // TODO: PRINT MESSAGE TO USER
-                        console.log(kasteelheren[temp_index].naam + " " + saldo[temp_index] + " to: " + kasteelheren[j].naam);
+                        // console.log(kasteelheren[temp_index].naam + " " + Math.abs(saldo[temp_index].toFixed(2)) + " to: " + kasteelheren[j].naam);
+                        transferString = [...transferString, kasteelheren[temp_index].naam + " " + Math.abs(saldo[temp_index].toFixed(2)) + " to: " + kasteelheren[j].naam];
                         saldo[j] += saldo[temp_index];
                         saldo[temp_index] = 0;
                     }
@@ -103,7 +112,7 @@
                 temp_index++;
             }
         }
-
+        console.log(transferString)
     }
 
     function sum(array: number[]): number {
@@ -119,11 +128,11 @@
         <table class="border-separate border-spacing-2 border border-slate-400">
             <thead>
                 <tr>
-                    <th class="bg-white w-10 truncate">naam</th>
+                    <th class="w-10 truncate">naam</th>
                     {#each kasteelheren as header}
-                    <th class="bg-white w-10 truncate">{header.naam}</th>
+                    <th class="w-10 truncate">{header.naam}</th>
                     {/each}
-                    <th class="bg-white w-10 truncate">OUD</th>
+                    <th class="w-10 truncate">OUD</th>
                 </tr>
             </thead>
             {#each tableData as row, i}
@@ -139,4 +148,12 @@
         </table>
         <input class="bg-white center-self" type="submit">
     </form>
+
+    <div>
+        {#each transferString as item (item)}
+        <div class="h-10 bg-green">
+            <p class="bg-white text-black">{item}</p>
+        </div>
+        {/each}
+    </div>
 </div>

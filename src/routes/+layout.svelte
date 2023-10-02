@@ -12,7 +12,7 @@ import "../app.css";
     <main class='flex flex-col justify-center m-0 w-full h-full'>
         <slot />    
     </main>
-    <Background />
+    <!-- <Background /> -->
 </div>
 
 <svelte:window bind:innerHeight={$height}/>

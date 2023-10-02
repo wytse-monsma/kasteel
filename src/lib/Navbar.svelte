@@ -1,7 +1,15 @@
-<nav class="bg-black text-white">
-    <a href="/"><span class="text-white">Home</span></a>
-    <a href="/schoonmaakrooster"> <span class="text-white"> schoonmaakrooster</span></a>
-    <a href="/verrekenlijst"> <span class="text-white"> verrekenlijst</span></a>
+<nav class="bg-black text-white h-14 w-full">
+    <div class="flex flex-row flex-nowrap w-10/12">
+        <div class=" w-3/12 overflow-hidden">
+            <a href="/"><span class="text-white">Home</span></a>
+        </div>
+        <div class=" w-3/12 overflow-hidden">
+            <a href="/schoonmaakrooster"> <span class="text-white">rooster</span></a>
+        </div>
+        <div class=" w-3/12 overflow-hidden">
+            <a href="/verrekenlijst"> <span class="text-white">verrekenlijst</span></a>
+        </div>
+    </div>
     <!-- <a href="/signup"><span class="text-white">Sign up</span></a>
     <h1>BITCHES</h1> -->
 </nav>
