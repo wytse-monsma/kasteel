@@ -1,0 +1,1 @@
+<div class="absolute -z-10 w-full h-full bg-gradient-to-br from-slate-300 to-red-400"></div>
