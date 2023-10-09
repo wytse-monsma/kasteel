@@ -1,5 +1,5 @@
-<nav class="bg-black text-white h-14 w-full">
-    <div class="flex flex-row flex-nowrap w-10/12">
+<nav class="bg-primary opacity-70 text-white h-14 w-full">
+    <div class="flex flex-row justify-between flex-nowrap w-10/12 self-center text-center">
         <div class=" w-3/12 overflow-hidden">
             <a href="/"><span class="text-white">Home</span></a>
         </div>
