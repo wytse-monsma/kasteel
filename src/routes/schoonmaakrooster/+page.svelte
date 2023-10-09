@@ -17,10 +17,6 @@
     }
 </script>
 
-<!-- <div class="self-center">
-    <img src="/schoonmaakrooster.PNG" alt="schoonmaakrooster" width="691px" height="681px"/>
-</div> -->
-
 <div class="self-center">
     <div class="flex flex-col space-between">
         <!-- 59A VOOOO -->
