@@ -20,7 +20,7 @@
 <div class="self-center">
     <div class="flex flex-col space-between">
         <!-- 59A VOOOO -->
-        <div class="flex flex-col m-20">
+        <div class="flex flex-col self-center">
             <div class="text-center font-bold text-lg"> 59A </div>
             {#each kasteel59a as kasteelheer}
             <div class="flex flex-row">    
@@ -31,7 +31,7 @@
         </div>
 
         <!-- 61A BAHHHH -->
-        <div class="flex flex-col m-20">
+        <div class="flex flex-col self-center">
             <div class="text-center font-bold text-lg"> 61A </div>
             {#each data.kasteelheren as kasteelheer}
             {#if kasteelheer.huisnummer == "61A"}
