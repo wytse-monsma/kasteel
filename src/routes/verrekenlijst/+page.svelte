@@ -1,4 +1,6 @@
 <script lang="ts">
+    import { onMount } from "svelte";
+
     type Kasteelheer = {
         kasteelheer_id?: number;
         naam: string;
@@ -10,20 +12,6 @@
 
     // variables
     // TODO: REPLACE WITH BACKEND STUFF
-    let kasteelheren: Kasteelheer[] = [
-        {naam: 'Mons', is_actief: true},
-        {naam: 'Chos', is_actief: true},
-        {naam: 'Jolt', is_actief: true},
-        {naam: 'Otto', is_actief: true},
-        {naam: 'Mata', is_actief: true},
-        {naam: 'Oenk', is_actief: true},
-        {naam: 'Culo', is_actief: true},
-        {naam: 'Jors', is_actief: true}];
-    let headers: string[] = ['gedronken', 'ingelegd aanbieding', 'ingelegd normaal', 'ingelegd klok', 'statie inlever', 'statie inleg']
-    let tableData = Array(6).fill(0).map(() => Array(kasteelheren.length + 1).fill(0));
-    let transferString: string[] = []
-
-    // prices
     let prijs_krat_normaal = 18.46
     let prijs_krat_aanbieding = 13.85
     let prijs_krat_klok = 9.99
@@ -31,6 +19,29 @@
     let prijs_biertje_aanbieding = prijs_krat_aanbieding / 24
     let prijs_statiegeld = 3.90
 
+    let kasteelheren: Kasteelheer[]= [];
+    let headers: string[] = [];
+    let tableData: number[][] = [];
+    let transferString: string[] = [];
+
+    onMount(() => {
+
+        kasteelheren = [
+            {naam: 'Mons', is_actief: true},
+            {naam: 'Chos', is_actief: true},
+            {naam: 'Jolt', is_actief: true},
+            {naam: 'Otto', is_actief: true},
+            {naam: 'Mata', is_actief: true},
+            {naam: 'Oenk', is_actief: true},
+            {naam: 'Culo', is_actief: true},
+            {naam: 'Jors', is_actief: true}];
+            headers = ['gedronken', 'ingelegd aanbieding', 'ingelegd normaal', 'ingelegd klok', 'statie inlever', 'statie inleg']
+            tableData = Array(6).fill(0).map(() => Array(kasteelheren.length + 1).fill(0));
+            
+            // prices
+
+    })
+    
     function verrekenen(data: number[][]) {
         // gemiddelde bierprijs
         let totaal_gekocht = 24 * (sum(data[1]) + sum(data[2]) + sum(data[3]));

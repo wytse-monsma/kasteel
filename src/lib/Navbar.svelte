@@ -1,7 +1,12 @@
+<script>
+
+    // import { _Login } from "../routes/api/login/+server";
+
+</script>
 <nav class="bg-primary opacity-70 text-white h-14 w-full">
     <div class="flex flex-row justify-between flex-nowrap w-10/12 self-center text-center">
         <div class=" w-3/12 overflow-hidden">
-            <a href="/"><span class="text-white">Home</span></a>
+            <!-- <button on:click={() => _Login()}> LOGIN </button>  -->
         </div>
         <div class=" w-3/12 overflow-hidden">
             <a href="/schoonmaakrooster"> <span class="text-white">rooster</span></a>

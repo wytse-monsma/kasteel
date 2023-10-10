@@ -21,23 +21,23 @@
     <div class="flex flex-col space-between">
         <!-- 59A VOOOO -->
         <div class="flex flex-col self-center">
-            <div class="text-center font-bold text-lg"> 59A </div>
+            <div class="text-center font-bold text-lg text-primary"> 59A </div>
             {#each kasteel59a as kasteelheer}
             <div class="flex flex-row">    
-                <div class="border-2 mb-2 border-r-transparent w-40">{kasteelheer.naam}</div>
-                <div class="border-2 mb-2 border-l-transparent w-20">{getTaak(kasteelheer)}</div>
+                <div class="border-2 mb-2 border-r-transparent w-40 text-primary">{kasteelheer.naam}</div>
+                <div class="border-2 mb-2 border-l-transparent w-20 text-primary">{getTaak(kasteelheer)}</div>
             </div>
             {/each}
         </div>
 
         <!-- 61A BAHHHH -->
         <div class="flex flex-col self-center">
-            <div class="text-center font-bold text-lg"> 61A </div>
+            <div class="text-center font-bold text-lg text-primary"> 61A </div>
             {#each data.kasteelheren as kasteelheer}
             {#if kasteelheer.huisnummer == "61A"}
             <div class="flex flex-row">    
-                <div class="border-2 mb-2 border-r-transparent w-40">{kasteelheer.naam}</div>
-                <div class="border-2 mb-2 border-l-transparent w-20">{getTaak(kasteelheer)}</div>
+                <div class="border-2 mb-2 border-r-transparent w-40 text-primary">{kasteelheer.naam}</div>
+                <div class="border-2 mb-2 border-l-transparent w-20 text-primary">{getTaak(kasteelheer)}</div>
             </div>
             {/if}
             {/each}

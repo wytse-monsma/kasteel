@@ -9,7 +9,7 @@ import "../app.css";
 <!-- <div style={`height: ${$height}px;`} class='w-full'> -->
 <div class='grid-rows-[6rem_1fr] grid gap-0 h-[100dvh]'>
     <Navbar />
-    <main class='flex flex-col justify-center m-0 w-full h-full'>
+    <main class='flex flex-col justify-center m-0 w-full h-full overflow-scroll'>
         <slot />    
     </main>
     <Background2 />
