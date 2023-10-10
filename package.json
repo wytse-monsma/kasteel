@@ -23,6 +23,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@supabase/auth-helpers-sveltekit": "^0.10.3",
 		"@supabase/supabase-js": "^2.38.0",
 		"@sveltejs/adapter-vercel": "^3.0.2",
 		"@types/p5": "^1.6.2",

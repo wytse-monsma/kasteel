@@ -1,4 +1,12 @@
 import { createClient } from '@supabase/supabase-js'
-import { ANON_PUBLIC, SUPABASE_URL} from '$env/static/private'
 
-export const supabase = createClient(SUPABASE_URL, ANON_PUBLIC)
+const supabaseURL = import.meta.env.VITE_PUBLIC_SUPABASE_URL
+const anonkey = import.meta.env.VITE_PUBLIC_ANON_KEY
+
+export const supabase = createClient(supabaseURL, anonkey)
+
+export async function login() {
+    await supabase.auth.signInWithOAuth({
+        provider: 'google',
+    })
+}

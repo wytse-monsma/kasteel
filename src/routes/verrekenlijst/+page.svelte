@@ -68,9 +68,9 @@
 
             saldo[i] = totaal_betaald - totaal_kosten;
         }
-        console.log("-------------------------")
-        console.log(saldo)
-        console.log("-------------------------")
+        // console.log("-------------------------")
+        // console.log(saldo)
+        // console.log("-------------------------")
 
         // Verrekening
         for (let j=0; j<kasteelheren.length; j++) {
@@ -123,7 +123,7 @@
                 temp_index++;
             }
         }
-        console.log(transferString)
+        // console.log(transferString)
     }
 
     function sum(array: number[]): number {
